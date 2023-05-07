@@ -1,0 +1,40 @@
+{
+  "name": "front",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "scripts": {
+    "dev": "npx nodemon",
+    "build": "rimraf ./app/build && npx tsc",
+    "start": "npm run build && node app/build/main",
+    "lint": "npx eslint ./app/src",
+    "format": "npx eslint ./app/src --fix",
+    "pretty": "npx prettier --write ./app/src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.1.0",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "@typescript-eslint/parser": "^5.59.2",
+    "eslint": "^8.40.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.3",
+    "nodemon": "^2.0.22",
+    "prettier": "2.8.8",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
+    "axios": "^1.4.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0"
+  }
+}
